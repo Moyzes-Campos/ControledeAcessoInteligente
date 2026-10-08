@@ -1,0 +1,7 @@
+outputs/
+faces/*
+!faces/README.md
+__pycache__/
+*.py[cod]
+.pytest_cache/
+

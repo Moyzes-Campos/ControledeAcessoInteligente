@@ -1,0 +1,21 @@
+{
+  "onnx_sha256": "4c06341c33c2ca1f86781dab0e829f88ad5b64be9fba56e56bc9ebdefc619e43",
+  "engine_sha256": "9a95421d60b2e84f751f93355981fd337a820688bbd53f10dd1f9a7d50daf8a9",
+  "tensorrt_version": "10.14.1.48",
+  "gpu_name": "NVIDIA GeForce RTX 3050 6GB Laptop GPU",
+  "compute_capability": [
+    8,
+    6
+  ],
+  "input_shape": [
+    1,
+    3,
+    112,
+    112
+  ],
+  "output_names": [
+    "683"
+  ],
+  "precision": "fp16",
+  "build_seconds": 79.999
+}

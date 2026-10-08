@@ -1,0 +1,10 @@
+# O projeto usa a .venv da pasta raiz. Estas versoes documentam o conjunto minimo.
+numpy>=1.26,<2
+opencv-contrib-python>=4.10
+ultralytics>=8.3
+torch>=2.1
+filterpy>=1.4
+lap>=0.5
+onnxruntime-gpu==1.18.0  # instalar a variante CUDA 12 (veja README)
+insightface==0.7.3
+
