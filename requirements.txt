@@ -1,10 +1,26 @@
-# O projeto usa a .venv da pasta raiz. Estas versoes documentam o conjunto minimo.
-numpy>=1.26,<2
-opencv-contrib-python>=4.10
-ultralytics>=8.3
-torch>=2.1
-filterpy>=1.4
-lap>=0.5
-onnxruntime-gpu==1.18.0  # instalar a variante CUDA 12 (veja README)
+﻿# Ambiente de referencia: Windows x64, Python 3.10, GPU NVIDIA.
+# Instalar: python -m pip install -r requirements.txt
+# PyTorch CUDA 12.1 / cuDNN 8 (mesmas versoes do ambiente do projeto).
+--extra-index-url https://download.pytorch.org/whl/cu121
+
+numpy==1.26.4
+# Um unico pacote OpenCV; inclui YuNet, SFace e interface grafica.
+opencv-python==4.11.0.86
+ultralytics==8.4.43
+torch==2.1.2+cu121
+torchvision==0.16.2+cu121
+
+# SCRFD e ArcFace. A versao do PyPI usa CUDA 11; para CUDA 12,
+# depois da instalacao acima, executar o comando abaixo:
+# python -m pip install --force-reinstall --no-deps onnxruntime-gpu==1.18.0 --index-url https://aiinfra.pkgs.visualstudio.com/PublicPackages/_packaging/onnxruntime-cuda-12/pypi/simple/
+onnxruntime-gpu==1.18.0
 insightface==0.7.3
 
+# Execucao/exportacao das engines .engine: CUDA 12, TensorRT 10.
+# Recriar as engines quando mudar de GPU ou versao do TensorRT.
+tensorrt-cu12==10.14.1.48
+
+# SQLite, HTTP/ESP32 e unittest fazem parte da biblioteca padrao.
+# O tracker local nao usa filterpy nem lap.
+# Drivers NVIDIA e ferramentas C++ para compilar insightface no Windows
+# sao pre-requisitos do sistema, nao pacotes Python.
